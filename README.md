@@ -22,9 +22,34 @@ You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the 
 - click *Next*
 - enter a Node-RED *Username* and *Password* and click *Next* twice, then click *Finish*
 - click on *Go to your Node-RED flow editor* and login
+
+You have to add the Node-RED Dashboard (UI nodes) before you import the sample flow.
+
+- select manage palatte from the menu on right upper side of the page
+
+![Select Manage Palette](Node-RED_Select_Manage-Palette.jpg)
+
+- now choose the tab *install*, search for Node-RED Dashboard (*node-red-dasgboard*) and press *install*
+
+![Node-RED install nodes](Node-RED_Install_nodes.jpg)
+
+Now you can import and deploy the sample flow
 - import [this Node-RED flow](https://raw.githubusercontent.com/gitjps/hackathons_and_node-red/master/node-red-flows/node-flows-hackathon-hacknext-2019.json) via the clipboard 
 
 ![Node-RED import](importnoderedflow.jpg)
-- there are some error messages because some required nodes are not installed yet, but we don't worry for for now
+
 - the sample code is now imported into several Node-RED flow which can be selected by clicking of the tabs
-- click on the red *Deploy* button to deploy and run all flows
+- go to flow *1. Basics* and click on the red *Deploy* button to deploy and run all flows (click *Confirm deploy* and *Close*)
+- enable the debug messages in the right side bar
+
+![debug messages](debugmessages.jpg)
+
+- now click on the button of the Hello World inject node
+
+![hello world](helloworld.jpg)
+
+This way a message is generated (in attribute payload of the message), transfered to the green debug node, that displays it in the right sidebar.
+
+# Installation of the Watson Assistant
+
+(to be continued)
