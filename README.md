@@ -7,9 +7,46 @@ The figure shows a sample architecture.
 
 ![image](architecture.jpg)
 
-The script is based on [this tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red), which also contains some videos. 
+This script is based on a [tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red), which also contains some videos. 
 # Prereqs
-You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud if not done already. If you are attending a hackathon you might get a special registration URL.
+You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4youHackbay2019.
+
+# Watson Assistant Service
+The Watson Assistant service is an artificial intelligence service a a building block for chatbots and can be found the the AI category of the IBM Cloud catalog.
+## Installation
+- go to the [Catalog](https://cloud.ibm.com/catalog), under *All Categories* on the left click on [AI](https://cloud.ibm.com/catalog?category=ai)
+- click on *Watson Assistant* and choose a region, e.g. Frankfurt
+- click on *Create*, the click on the alias
+
+![WA service](wa-service.jpg)
+
+The service is now running and can be used.
+- make note of the API key and the URL  
+
+![WA service details](wa-service2.jpg)
+- click on *Launch Tool* and on  *Skills* (in the top menu)
+
+We are using a pre-installed skill that we can modify.
+- click on the 3 dots of the pre-installed *Customer Care Sample Skill*
+- click on *View API details* and make note of the workspace ID, the username (apikey) and der password (the 1st one)
+- close the API details view and open the *Customer Care Sample Skill* by clicking on the center of the tile
+Now you can see the tabs where you can modify the skill, primarily the intents, entities amnd the dialog.
+- click on *Try it* at the upper right corner and enter *hello*
+
+## Accessing the WA service
+
+The Watson Assistant service can be accessed on various ways:
+- SDKs (Go, Java, Node, Python, Ruby, Swift)
+- Node-RED
+- REST/curl
+
+### Access via REST APIs/curl
+
+This interface is documented in the [API reference](https://cloud.ibm.com/apidocs/assistant#get-response-to-user-input).
+
+**Example:**
+
+curl -X POST -u "apikey:mkRm0xVF.........Edbxde0ua" --header "Content-Type:application/json" --data "{\"input\": {\"text\": \"Hello\"}}" "https://gateway-fra.watsonplatform.net/assistant/api/v1/workspaces/c321c0......eae0eb10d/message?version=2019-02-28"
 
 # Install the Node-RED Starter Kit
 - go to the [Catalog](https://cloud.ibm.com/catalog) and search for _Node-RED Starter_ or directly to [Create a Cloud Foundry App/Node-RED Starter](https://cloud.ibm.com/catalog/starters/node-red-starter)
@@ -50,6 +87,13 @@ Now you can import and deploy the sample flow
 
 This way a message is generated (in attribute payload of the message), transfered to the green debug node, that displays it in the right sidebar.
 
-# Installation of the Watson Assistant
+To take advantage from the VCAP variable and the easy usage of service in IBM Cloud, you should bind the service to your Node-RED instance.
 
-(to be continued)
+siehe https://github.com/thomassuedbroecker/hackathons_and_node-red
+
+<bild> ist das wirklich notwendig?
+
+Open your Node-RED Application in IBM Cloud.
+
+Press create connection. The you can select you Watson Assistant service
+
