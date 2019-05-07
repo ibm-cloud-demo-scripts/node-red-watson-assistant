@@ -12,7 +12,7 @@ This script is based on a [tutorial](https://github.com/thomassuedbroecker/hacka
 You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4youHackbay2019.
 
 # Watson Assistant Service
-The Watson Assistant service is an artificial intelligence service a a building block for chatbots and can be found the the AI category of the IBM Cloud catalog.
+The Watson Assistant service is an artificial intelligence service within the IBM Cloud and can be found the the AI category of the catalog.
 ## Installation
 - go to the [Catalog](https://cloud.ibm.com/catalog), under *All Categories* on the left click on [AI](https://cloud.ibm.com/catalog?category=ai)
 - click on *Watson Assistant* and choose a region, e.g. Frankfurt
@@ -24,7 +24,7 @@ The service is now running and can be used.
 - make note of the API key and the URL  
 
 ![WA service details](wa-service2.jpg)
-- click on *Launch Tool* and on  *Skills* (in the top menu)
+- click on *Launch tool* and on  *Skills* (in the top menu)
 
 We are using a pre-installed skill that we can modify.
 - click on the 3 dots of the pre-installed *Customer Care Sample Skill*
@@ -42,7 +42,7 @@ The Watson Assistant service can be accessed on various ways:
 
 ### Access via REST APIs/curl
 
-This interface is documented in the [API reference](https://cloud.ibm.com/apidocs/assistant#get-response-to-user-input).
+This interface is documented in the [API reference](https://cloud.ibm.com/apidocs/assistant#get-response-to-user-input). Note, that the API endpoint (gateway-fra.watsonplatform.net) depends on the region.
 
 **Example:**
 
@@ -66,7 +66,7 @@ You have to add the Node-RED Dashboard (UI nodes) before you import the sample f
 
 ![Select Manage Palette](Node-RED_Select_Manage-Palette.jpg)
 
-- now choose the tab *install*, search for Node-RED Dashboard (*node-red-dasgboard*) and press *install*
+- now choose the tab *install*, search for Node-RED Dashboard (*node-red-dashboard*) and press *install*
 
 ![Node-RED install nodes](Node-RED_Install_nodes.jpg)
 
@@ -76,17 +76,32 @@ Now you can import and deploy the sample flow
 ![Node-RED import](importnoderedflow.jpg)
 
 - the sample code is now imported into several Node-RED flow which can be selected by clicking of the tabs
-- go to flow *1. Basics* and click on the red *Deploy* button to deploy and run all flows (click *Confirm deploy* and *Close*)
-- enable the debug messages in the right side bar
+# Using the Dashboard
+The dashboard nodes imported above are used to access the user interface.
+## Accessing the Dashboard
+- you can go to the UI (dashboard) if you click on *Dashboard*
 
+![Go to Dashboard](dashboard1.jpg)
+
+and then on the little arrow
+
+![Dashboard arrow](dashboard2.jpg)
+
+## Designing the Dashboard
+Lot's of tutorials are available, jsut search for *Dashboard Node-RED*, or see https://www.youtube.com/watch?v=X8ustpkAJ-U , for example.
+# Hello World
 ![debug messages](debugmessages.jpg)
 
+- go to flow *1. Basics* and click on the red *Deploy* button to deploy and run all flows (click *Confirm deploy* and *Close*)
+- enable the debug messages in the right side bar
 - now click on the button of the Hello World inject node
 
 ![hello world](helloworld.jpg)
 
 This way a message is generated (in attribute payload of the message), transfered to the green debug node, that displays it in the right sidebar.
-
+## User Interface
+The User Interface
+## VCAP Variable
 To take advantage from the VCAP variable and the easy usage of service in IBM Cloud, you should bind the service to your Node-RED instance.
 
 siehe https://github.com/thomassuedbroecker/hackathons_and_node-red
@@ -96,4 +111,19 @@ siehe https://github.com/thomassuedbroecker/hackathons_and_node-red
 Open your Node-RED Application in IBM Cloud.
 
 Press create connection. The you can select you Watson Assistant service
+
+
+# Calling the Watson Assistant from Node-RED
+
+# Making HTTP Requests
+
+There's a sample POST request as a starting point.
+- go to flow *9. useCreditpaas Api sample (Hacknext)*
+![Post Request](post-request.jpg)
+- click on the http POST request node and then on the little i (information)
+![Post Request](information.jpg)
+Here you can see a descrioption of the node. The body and headers of the request are set in the  *function node* "build the request". To invoke the request click on *Inject* (the output of that node is not used).
+
+# Provide a REST API
+- go to flow *8. PROVIDE REST API  (Basic)*
 
