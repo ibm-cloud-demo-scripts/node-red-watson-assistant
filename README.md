@@ -1,15 +1,18 @@
-![chatbot](Conversation_service_Blog1200x600.png)
+![chatbot](images/Conversation_service_Blog1200x600.png)
 
 # Node-RED Watson Assistant Demo (draft)
 
 The goal of this demo is to build a chatbot with IBM Watson Assistant and Node-RED. Node-RED is a visual programming and intenet wiring tool which is quite useful for hackathons and prototypes. It connects all the devices with the cloud services, backend systems and external services.
 The figure shows a sample architecture.
 
-![image](architecture.jpg)
+![image](images/architecture.jpg)
 
 This script is based on a [tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red), which also contains some videos. 
+
+**Contact:** Peter Schleinitz, jens-peter.schleinitz@de.ibm.com
+
 # Prereqs
-You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4youHackbay2019.
+You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4yourhackathon.
 
 # Watson Assistant Service
 The Watson Assistant service is an artificial intelligence service within the IBM Cloud and can be found the the AI category of the catalog.
@@ -18,12 +21,12 @@ The Watson Assistant service is an artificial intelligence service within the IB
 - click on *Watson Assistant* and choose a region, e.g. Frankfurt
 - click on *Create*, the click on the alias
 
-![WA service](wa-service.jpg)
+![WA service](images/wa-service.jpg)
 
 The service is now running and can be used.
 - make note of the API key and the URL  
 
-![WA service details](wa-service2.jpg)
+![WA service details](images/wa-service2.jpg)
 - click on *Launch tool* and on  *Skills* (in the top menu)
 
 We are using a pre-installed skill that we can modify.
@@ -54,7 +57,7 @@ curl -X POST -u "apikey:mkRm0xVF.........Edbxde0ua" --header "Content-Type:appli
 - choose a region, organization, and a space or use the defaults
 - click on *Create*, der app is now starting
 
- ![Node-RED running](noderedrunning.jpg)
+ ![Node-RED running](images/noderedrunning.jpg)
 - click on *Visit App URL*
 - click *Next*
 - enter a Node-RED *Username* and *Password* and click *Next* twice, then click *Finish*
@@ -64,16 +67,16 @@ You have to add the Node-RED Dashboard (UI nodes) before you import the sample f
 
 - select manage palatte from the menu on right upper side of the page
 
-![Select Manage Palette](Node-RED_Select_Manage-Palette.jpg)
+![Select Manage Palette](images/Node-RED_Select_Manage-Palette.jpg)
 
 - now choose the tab *install*, search for Node-RED Dashboard (*node-red-dashboard*) and press *install*
 
-![Node-RED install nodes](Node-RED_Install_nodes.jpg)
+![Node-RED install nodes](images/Node-RED_Install_nodes.jpg)
 
 Now you can import and deploy the sample flow
 - import [this Node-RED flow](https://raw.githubusercontent.com/gitjps/hackathons_and_node-red/master/node-red-flows/node-flows-hackathon-hacknext-2019.json) via the clipboard 
 
-![Node-RED import](importnoderedflow.jpg)
+![Node-RED import](images/importnoderedflow.jpg)
 
 - the sample code is now imported into several Node-RED flow which can be selected by clicking of the tabs
 # Using the Dashboard
@@ -81,49 +84,40 @@ The dashboard nodes imported above are used to access the user interface.
 ## Accessing the Dashboard
 - you can go to the UI (dashboard) if you click on *Dashboard*
 
-![Go to Dashboard](dashboard1.jpg)
+![Go to Dashboard](images/dashboard1.jpg)
 
 and then on the little arrow
 
-![Dashboard arrow](dashboard2.jpg)
+![Dashboard arrow](images/dashboard2.jpg)
 
 ## Designing the Dashboard
 Lot's of tutorials are available, jsut search for *Dashboard Node-RED*, or see https://www.youtube.com/watch?v=X8ustpkAJ-U , for example.
 # Hello World
-![debug messages](debugmessages.jpg)
+![debug messages](images/debugmessages.jpg)
 
 - go to flow *1. Basics* and click on the red *Deploy* button to deploy and run all flows (click *Confirm deploy* and *Close*)
 - enable the debug messages in the right side bar
 - now click on the button of the Hello World inject node
 
-![hello world](helloworld.jpg)
+![hello world](images/helloworld.jpg)
 
 This way a message is generated (in attribute payload of the message), transfered to the green debug node, that displays it in the right sidebar.
-## User Interface
-The User Interface
-## VCAP Variable
-To take advantage from the VCAP variable and the easy usage of service in IBM Cloud, you should bind the service to your Node-RED instance.
-
-siehe https://github.com/thomassuedbroecker/hackathons_and_node-red
-
-<bild> ist das wirklich notwendig?
-
-Open your Node-RED Application in IBM Cloud.
-
-Press create connection. The you can select you Watson Assistant service
-
 
 # Calling the Watson Assistant from Node-RED
 
 # Making HTTP Requests
 
-There's a sample POST request as a starting point.
+With http requests you can send/receive data to/from external services. There's a sample POST request as a starting point.
 - go to flow *9. useCreditpaas Api sample (Hacknext)*
-![Post Request](post-request.jpg)
-- click on the http POST request node and then on the little i (information)
-![Post Request](information.jpg)
-Here you can see a descrioption of the node. The body and headers of the request are set in the  *function node* "build the request". To invoke the request click on *Inject* (the output of that node is not used).
+![Post Request](images/post-request.jpg)
+
+- click on the *http POST request* node and then on the little i (information)
+![Post Request](images/information.jpg)
+Here you can see a descrioption of the node. The body (payload) and headers of the request are set in the  *function node* "build the request". To invoke the request click on *Inject* (the output of that node is not used).
 
 # Provide a REST API
+The Node-RED instance is reachable via REST APIs. The *http in* node is used to define the endpoint (route, method), see also https://cookbook.nodered.org/http/post-form-data-to-a-flow.
+
+You can find **example** if you
 - go to flow *8. PROVIDE REST API  (Basic)*
 
