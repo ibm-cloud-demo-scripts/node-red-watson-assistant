@@ -118,6 +118,6 @@ Here you can see a descrioption of the node. The body (payload) and headers of t
 # Provide a REST API
 The Node-RED instance is reachable via REST APIs. The *http in* node is used to define the endpoint (route, method), see also https://cookbook.nodered.org/http/post-form-data-to-a-flow.
 
-You can find **example** if you
+You can find an **example** if you
 - go to flow *8. PROVIDE REST API  (Basic)*
 
