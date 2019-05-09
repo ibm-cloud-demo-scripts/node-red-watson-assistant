@@ -55,7 +55,7 @@ curl -X POST -u "apikey:mkRm0xVF.........Edbxde0ua" --header "Content-Type:appli
 - go to the [Catalog](https://cloud.ibm.com/catalog) and search for _Node-RED Starter_ or directly to [Create a Cloud Foundry App/Node-RED Starter](https://cloud.ibm.com/catalog/starters/node-red-starter)
 - enter a unique App name, e.g. *myuniqueapp...*
 - choose a region, organization, and a space or use the defaults
-- click on *Create*, der app is now starting
+- click on *Create*, the app is now starting
 
  ![Node-RED running](images/noderedrunning.jpg)
 - click on *Visit App URL*
