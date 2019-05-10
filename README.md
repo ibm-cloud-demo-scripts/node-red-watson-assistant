@@ -7,12 +7,12 @@ The figure shows a sample architecture.
 
 ![image](images/architecture.jpg)
 
-This script is based on a [tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red), which also contains some videos. 
+This script is based on a [tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red) by [Thomas Suedbroecker (@tsuedbroecker)](https://twitter.com/tsuedbroecker), which also contains some videos. 
 
-**Contact:** Peter Schleinitz, jens-peter.schleinitz@de.ibm.com
+Hope you find this useful and have fun trying it out. Feedback including issues, contribitions is certainly welcome.  
 
 # Prereqs
-You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4yourhackathon.
+You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud, if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4yourhackathon.
 
 # Watson Assistant Service
 The Watson Assistant service is an artificial intelligence service within the IBM Cloud and can be found the the AI category of the catalog.
@@ -91,7 +91,7 @@ and then on the little arrow
 ![Dashboard arrow](images/dashboard2.jpg)
 
 ## Designing the Dashboard
-Lot's of tutorials are available, jsut search for *Dashboard Node-RED*, or see https://www.youtube.com/watch?v=X8ustpkAJ-U , for example.
+Lots of tutorials are available, just search for *Dashboard Node-RED*, or see https://www.youtube.com/watch?v=X8ustpkAJ-U , for example.
 # Hello World
 ![debug messages](images/debugmessages.jpg)
 
@@ -113,6 +113,7 @@ With http requests you can send/receive data to/from external services. There's 
 
 - click on the *http POST request* node and then on the little i (information)
 ![Post Request](images/information.jpg)
+
 Here you can see a descrioption of the node. The body (payload) and headers of the request are set in the  *function node* "build the request". To invoke the request click on *Inject* (the output of that node is not used).
 
 # Provide a REST API
