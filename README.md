@@ -49,7 +49,9 @@ This interface is documented in the [API reference](https://cloud.ibm.com/apidoc
 
 **Example:**
 
+```
 curl -X POST -u "apikey:mkRm0xVF.........Edbxde0ua" --header "Content-Type:application/json" --data "{\"input\": {\"text\": \"Hello\"}}" "https://gateway-fra.watsonplatform.net/assistant/api/v1/workspaces/c321c0......eae0eb10d/message?version=2019-02-28"
+```
 
 # Install the Node-RED Starter Kit
 - go to the [Catalog](https://cloud.ibm.com/catalog) and search for _Node-RED Starter_ or directly to [Create a Cloud Foundry App/Node-RED Starter](https://cloud.ibm.com/catalog/starters/node-red-starter)
@@ -124,4 +126,4 @@ You can find an **example** if you
 
 # Simple forwarding server
 
-In case of CORS problems using Node-RED as REST server, a simple REST forwarding server, which is CORS enabled, might help, see https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_forward_server. A [simple webb app](https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_web_app) can be used to check this.
+In case of CORS problems using Node-RED as REST server, a simple REST forwarding server based on Node.js, which is CORS enabled, might help, see https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_forward_server. A [simple webb app](https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_web_app) can be used to check this.
