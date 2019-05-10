@@ -122,3 +122,6 @@ The Node-RED instance is reachable via REST APIs. The *http in* node is used to 
 You can find an **example** if you
 - go to flow *8. PROVIDE REST API  (Basic)*
 
+# Simple forwarding server
+
+In case of that a CORS problem using Node-RED as REST server can not be fixed a simple REST forwarding server, which has CORS enabled, might help, see https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_forward_server (to be completed)
