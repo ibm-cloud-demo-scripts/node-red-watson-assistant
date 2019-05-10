@@ -7,7 +7,7 @@ The figure shows a sample architecture.
 
 ![image](images/architecture.jpg)
 
-This script is based on a [tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red) by [Thomas Suedbroecker (@tsuedbroecker)](https://twitter.com/tsuedbroecker), which also contains some videos. 
+This demo guide is based on a [tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red) by [Thomas Suedbroecker (@tsuedbroecker)](https://twitter.com/tsuedbroecker), which also contains some videos. 
 
 Hope you find this useful and have fun trying it out. Feedback including issues, contribitions is certainly welcome.  
 
