@@ -9,7 +9,7 @@ The figure shows a sample architecture.
 
 This demo guide is based on a [tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red) by [Thomas Suedbroecker (@tsuedbroecker)](https://twitter.com/tsuedbroecker), which also contains some videos. 
 
-Hope you find this useful and have fun trying it out. Feedback including issues, contribitions is certainly welcome.  
+Hope you find this useful and have fun trying it out. Feedback including issues and contributions is certainly welcome.  
 
 # Prereqs
 You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud, if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4yourhackathon (just an example, this link does not work).
