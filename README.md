@@ -124,4 +124,4 @@ You can find an **example** if you
 
 # Simple forwarding server
 
-In case of that a CORS problem using Node-RED as REST server can not be fixed a simple REST forwarding server, which has CORS enabled, might help, see https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_forward_server (to be completed)
+In case of CORS problems using Node-RED as REST server, a simple REST forwarding server, which is CORS enabled, might help, see https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_forward_server. A [simple webb app](https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_web_app) can be used to check this.
