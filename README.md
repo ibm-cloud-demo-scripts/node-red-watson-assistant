@@ -1,6 +1,6 @@
 ![chatbot](images/Conversation_service_Blog1200x600.png)
 
-# Node-RED Watson Assistant Demo (draft)
+# Node-RED Watson Assistant Demo
 
 The goal of this demo is to build a chatbot with IBM Watson Assistant and Node-RED. Node-RED is a visual programming and intenet wiring tool which is quite useful for hackathons and prototypes. It connects all the devices with the cloud services, backend systems and external services.
 The figure shows a sample architecture.
