@@ -12,7 +12,7 @@ This script is based on a [tutorial](https://github.com/thomassuedbroecker/hacka
 Hope you find this useful and have fun trying it out. Feedback including issues, contribitions is certainly welcome.  
 
 # Prereqs
-You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud, if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4yourhackathon.
+You need an IBM Cloud account. Please [sign-up](https://cloud.ibm.com/) for the IBM Cloud, if not done already. If you are attending a hackathon you might get a special registration URL, e.g. http://ibm.biz/promo4yourhackathon (just an example, this link does not work).
 
 # Watson Assistant Service
 The Watson Assistant service is an artificial intelligence service within the IBM Cloud and can be found the the AI category of the catalog.
