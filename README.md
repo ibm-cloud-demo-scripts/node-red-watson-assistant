@@ -127,3 +127,6 @@ You can find an **example** if you
 # Simple forwarding server
 
 In case of CORS problems using Node-RED as REST server, a simple REST forwarding server based on Node.js, which is CORS enabled, might help, see https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_forward_server. A [simple web app](https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_web_app) can be used to check this.
+
+# Chatbot Platforms
+Chatbots can be used in a variety of use cases and the Watson Assistant services is the perfect tool to create them as described in this demo and these instructions for developers. Chatbot platforms like [Telegram](https://github.com/gitjps/chatbot-with-telegram), [Alexa](https://github.com/IBM/alexa-skill-watson-conversation), Slack, Facebook etc. can be connected to the Watson Assistant.
