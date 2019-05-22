@@ -31,7 +31,7 @@ The service is now running and can be used.
 
 We are using a pre-installed skill that we can modify.
 - click on the 3 dots of the pre-installed *Customer Care Sample Skill*
-- click on *View API details* and make note of the workspace ID, the username (apikey) and der password (the 1st one)
+- click on *View API details* and make note of the workspace ID,  the username (apikey) and the password (the 1st one) 
 - close the API details view and open the *Customer Care Sample Skill* by clicking on the center of the tile
 Now you can see the tabs where you can modify the skill, primarily the intents, entities amnd the dialog.
 - click on *Try it* at the upper right corner and enter *hello*
@@ -106,12 +106,20 @@ Lots of tutorials are available, just search for *Dashboard Node-RED*, or see ht
 This way a message is generated (in attribute payload of the message), transferred to the green debug node, that displays it in the right sidebar.
 
 # Calling the Watson Assistant from Node-RED
+The tab *Flow 1* is a simple flow calling the Watson Assistant service. 
+
+![WA flow](images/WA.jpg)
+- click on the blue Watson Assistant node and enter user name *apikey*, password, API Key, URL and workspace ID gathered above
+- click in the debug icon the upper right corner to see the output of the Watason Assistant node
+- click on the Inject node (*hi*) , you should see the response of the Watson Assistant service in the right sidebar
 
 # Making HTTP Requests
 
-With http requests you can send/receive data to/from external services. There's a sample POST request as a starting point.
+With http requests you can send/receive data to/from external services. There's a sample POST request (to a bank) as a starting point.
 - go to flow *9. useCreditpaas Api sample (Hacknext)*
 ![Post Request](images/post-request.jpg)
+
+Another option would be an integration with a calendar service.
 
 - click on the *http POST request* node and then on the little i (information)
 ![Post Request](images/information.jpg)
