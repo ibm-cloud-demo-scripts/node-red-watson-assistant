@@ -108,7 +108,7 @@ This way a message is generated (in attribute payload of the message), transferr
 # Calling the Watson Assistant from Node-RED
 The tab *2. Assistant* is a simple flow calling the Watson Assistant service. 
 
-- click on the blue Watson Assistant node and enter user name *apikey*, password, API Key, URL and workspace ID gathered above
+- click on the blue Watson Assistant node and enter user name *apikey*, password, API Key, URL and workspace ID gathered above and then click the *Deploy* button
 - click in the debug icon the upper right corner to see the output of the Watason Assistant node
 - click on the Inject node (*"I want to make a appointment"*) , you should see the response of the Watson Assistant service (*"What day would you like to come in?"*) in the right sidebar
 
