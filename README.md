@@ -106,12 +106,11 @@ Lots of tutorials are available, just search for *Dashboard Node-RED*, or see ht
 This way a message is generated (in attribute payload of the message), transferred to the green debug node, that displays it in the right sidebar.
 
 # Calling the Watson Assistant from Node-RED
-The tab *Flow 1* is a simple flow calling the Watson Assistant service. 
+The tab *2. Assistant* is a simple flow calling the Watson Assistant service. 
 
-![WA flow](images/WA.jpg)
 - click on the blue Watson Assistant node and enter user name *apikey*, password, API Key, URL and workspace ID gathered above
 - click in the debug icon the upper right corner to see the output of the Watason Assistant node
-- click on the Inject node (*hi*) , you should see the response of the Watson Assistant service in the right sidebar
+- click on the Inject node (*I want to make a appointment*) , you should see the response of the Watson Assistant service (*What day would you like to come in?*)in the right sidebar
 
 # Making HTTP Requests
 
