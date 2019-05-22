@@ -110,7 +110,7 @@ The tab *2. Assistant* is a simple flow calling the Watson Assistant service.
 
 - click on the blue Watson Assistant node and enter user name *apikey*, password, API Key, URL and workspace ID gathered above
 - click in the debug icon the upper right corner to see the output of the Watason Assistant node
-- click on the Inject node (*I want to make a appointment*) , you should see the response of the Watson Assistant service (*What day would you like to come in?*)in the right sidebar
+- click on the Inject node (*"I want to make a appointment"*) , you should see the response of the Watson Assistant service (*"What day would you like to come in?"*) in the right sidebar
 
 # Making HTTP Requests
 
