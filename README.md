@@ -5,7 +5,7 @@
 The goal of this demo is to build a chatbot with IBM Watson Assistant and Node-RED. Node-RED is a visual programming and internet wiring tool which is quite useful for hackathons and prototypes. It connects all the devices with the cloud services, backend systems and external services.
 The figure shows a sample architecture.
 
-![image](images/architecture.jpg)
+![image](images/architecture.png)
 
 This demo guide is based on a [tutorial](https://github.com/thomassuedbroecker/hackathons_and_node-red) by [Thomas Suedbroecker (@tsuedbroecker)](https://twitter.com/tsuedbroecker), which also contains some videos. 
 
