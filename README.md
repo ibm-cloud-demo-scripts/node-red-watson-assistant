@@ -61,7 +61,7 @@ Chatbots can be used in a variety of use cases and the Watson Assistant services
 - go to the service overview, click on *Launch tool*
 - under the tab *Assistants* click on *Create assistant*  and follow the instructions
 
-Other platforms like [Telegram](https://github.com/gitjps/chatbot-with-telegram), [Alexa](https://github.com/IBM/alexa-skill-watson-conversation), Skype etc. need an additional component (e.g. an existing Node-RED instance) to connect to the Watson Assistant service.
+Other platforms like [Telegram](https://github.com/gitjps/chatbot-with-telegram), [Alexa](https://github.com/IBM/alexa-skill-watson-conversation), Skype etc. need an additional component (e.g. Node-RED, Cloud Functions, Node.js) to connect to the Watson Assistant service.
 
 ## Using Programmatic Calls
 [Programmatic calls](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-actions) can be used to create/update/read/delete real-time data from backend systems, see [example](https://github.com/gitjps/watsonassistant-nodered-gateway).
