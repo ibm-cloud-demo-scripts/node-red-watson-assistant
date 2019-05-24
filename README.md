@@ -54,7 +54,7 @@ This interface is documented in the [API reference](https://cloud.ibm.com/apidoc
 curl -X POST -u "apikey:mkRm0xVF.........Edbxde0ua" --header "Content-Type:application/json" --data "{\"input\": {\"text\": \"Hello\"}}" "https://gateway-fra.watsonplatform.net/assistant/api/v1/workspaces/c321c0......eae0eb10d/message?version=2019-02-28"
 ```
 
-## Chatbot Platforms
+### Chatbot Platforms
 Chatbots can be used in a variety of use cases and the Watson Assistant services is the perfect tool to create them as described in this demo and these instructions for developers. Messenger and Slack can be connected directly to an [Assistant](https://cloud.ibm.com/docs/services/assistant?topic=assistant-assistants) of the Watson Assistant Service : 
 
 - go to https://cloud.ibm.com/resources and search for your Watson Assistant service
