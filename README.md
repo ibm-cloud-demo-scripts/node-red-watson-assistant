@@ -20,6 +20,7 @@ The Watson Assistant service is an artificial intelligence service within the IB
 - go to the [Catalog](https://cloud.ibm.com/catalog), under *All Categories* on the left click on [AI](https://cloud.ibm.com/catalog?category=ai)
 - click on *Watson Assistant* and choose a region, e.g. Frankfurt
 - click on *Create*, the click on the alias
+- bookmark this page
 
 ![WA service](images/wa-service.jpg)
 
@@ -52,6 +53,15 @@ This interface is documented in the [API reference](https://cloud.ibm.com/apidoc
 ```
 curl -X POST -u "apikey:mkRm0xVF.........Edbxde0ua" --header "Content-Type:application/json" --data "{\"input\": {\"text\": \"Hello\"}}" "https://gateway-fra.watsonplatform.net/assistant/api/v1/workspaces/c321c0......eae0eb10d/message?version=2019-02-28"
 ```
+
+# Chatbot Platforms
+Chatbots can be used in a variety of use cases and the Watson Assistant services is the perfect tool to create them as described in this demo and these instructions for developers. Messenger and Slack can be connected directly to an [Assistant](https://cloud.ibm.com/docs/services/assistant?topic=assistant-assistants) of the Watson Assistant Service : 
+
+- go to https://cloud.ibm.com/resources and search for your Watson Assistant service
+- go to the service overview, click on *Launch tool*
+- under the tab *Assistants* click on *Create assistant*  and follow the instructions
+
+Other platforms like [Telegram](https://github.com/gitjps/chatbot-with-telegram), [Alexa](https://github.com/IBM/alexa-skill-watson-conversation), Skype etc. need an additional component (e.g. an existing Node-RED instance) to connect to the Watson Assistant service.
 
 # Install the Node-RED Starter Kit
 - go to the [Catalog](https://cloud.ibm.com/catalog) and search for _Node-RED Starter_ or directly to [Create a Cloud Foundry App/Node-RED Starter](https://cloud.ibm.com/catalog/starters/node-red-starter)
@@ -135,5 +145,3 @@ You can find an **example** if you
 
 In case of CORS problems using Node-RED as REST server, a simple REST forwarding server based on Node.js, which is CORS enabled, might help, see https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_forward_server. A [simple web app](https://github.com/gitjps/hackathons_and_node-red/tree/master/simple_web_app) can be used to check this.
 
-# Chatbot Platforms
-Chatbots can be used in a variety of use cases and the Watson Assistant services is the perfect tool to create them as described in this demo and these instructions for developers. While Messenger and Slack can be connected via an [Assistant](https://cloud.ibm.com/docs/services/assistant?topic=assistant-assistants) of the Watson Assistant Service other platforms like [Telegram](https://github.com/gitjps/chatbot-with-telegram), [Alexa](https://github.com/IBM/alexa-skill-watson-conversation), Skype etc. need an additional component (e.g. an existing Node-RED instance) to the Watson Assistant service.
