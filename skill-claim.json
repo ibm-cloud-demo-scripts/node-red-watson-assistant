@@ -1,0 +1,354 @@
+{
+  "name": "claim copy",
+  "intents": [
+    {
+      "intent": "bot_capabilities",
+      "examples": [
+        {
+          "text": "Wofür bist Du da"
+        },
+        {
+          "text": "Was kannst Du?"
+        },
+        {
+          "text": "Kannst Du ...?"
+        }
+      ],
+      "description": "get information what the bot can do for users"
+    },
+    {
+      "intent": "claim",
+      "examples": [
+        {
+          "text": "Ich möchte einen Schaden melden"
+        },
+        {
+          "text": "Ich habe einen Hagelschaden"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "time",
+      "examples": [
+        {
+          "text": "Kannst Du mir die Zeit verraten"
+        },
+        {
+          "text": "sag mir die Uhrzeit"
+        },
+        {
+          "text": "aktuelle Zeit"
+        },
+        {
+          "text": "Wie spät ist es"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "yesno",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "ja",
+            "japp",
+            "genau",
+            "richtig",
+            "richtig verstanden",
+            "stimmt"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": [
+            "nein",
+            "falsch",
+            "nicht richtig",
+            "falsch verstanden",
+            "stimmt nicht"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "de",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "output data from backend",
+      "output": {
+        "text": {
+          "values": [
+            "$my_result.gw_result.message"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1558620373801",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_2_1558621226453"
+    },
+    {
+      "type": "standard",
+      "title": "is VIN correct?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ihr Kennzeichen lautet $vin, ist das richtig?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1558616247808",
+      "context": {
+        "vin": "<?input.text?>"
+      },
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_4_1558616557979"
+    },
+    {
+      "type": "standard",
+      "title": "no claim, connect with supporter?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "okay, wollen Sie statt dessen mit einem Mitarbeiter telefonieren?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1558616107376",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_3_1558616419140",
+      "previous_sibling": "node_2_1558616247808"
+    },
+    {
+      "type": "standard",
+      "title": "if yes, what's the VIN",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okay, wie lautet Ihr Kennzeichen?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1558616107376",
+      "metadata": {},
+      "conditions": "@yesno:yes",
+      "dialog_node": "node_2_1558616247808"
+    },
+    {
+      "type": "standard",
+      "title": "ok, birthday?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Gut, wie lautet Ihr Geburtsdatum?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1558616557979",
+      "metadata": {},
+      "conditions": "@yesno:yes",
+      "dialog_node": "node_5_1558616771624"
+    },
+    {
+      "type": "standard",
+      "title": "yes",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1558616419140",
+      "metadata": {},
+      "conditions": "@yesno:yes",
+      "dialog_node": "node_2_1558673574648"
+    },
+    {
+      "type": "standard",
+      "title": "claim",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sie möchten einen Schaden melden, richtig?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#claim",
+      "dialog_node": "node_1_1558616107376",
+      "previous_sibling": "node_1_1558620373801"
+    },
+    {
+      "type": "standard",
+      "title": "Andernfalls",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ich habe Sie nicht verstanden. Bitte formulieren Sie Ihre Aussage neu."
+              },
+              {
+                "text": "Können Sie Ihre Aussage anders formulieren? Ich verstehe nicht, was Sie meinen."
+              },
+              {
+                "text": "Ich habe nicht verstanden, was Sie meinen."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Andernfalls",
+      "previous_sibling": "node_3_1558673960795"
+    },
+    {
+      "type": "standard",
+      "title": "current time",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "okay, "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "actions": [
+        {
+          "name": "/<space>/actions/gateway",
+          "type": "server",
+          "parameters": {
+            "query_params": "?request=time",
+            "target_route": "/wahandler",
+            "target_hostname": "http://<url>"
+          },
+          "credentials": "$private.my_credentials",
+          "result_variable": "$my_result"
+        }
+      ],
+      "metadata": {},
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#time",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1558620373801",
+      "previous_sibling": "Willkommen"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ich kann einen Schaden aufnehmen, an einen Mitarbeiter weiterleiten und Ihnen die aktuelle Zeit sagen"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#bot_capabilities",
+      "dialog_node": "node_3_1558673960795",
+      "previous_sibling": "node_1_1558616107376"
+    },
+    {
+      "type": "standard",
+      "title": "Willkommen",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hallo. Ich bin Lisa, wie kann ich Ihnen helfen?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "private": {
+          "my_credentials": {
+            "api_key": ""
+          }
+        }
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Willkommen"
+    }
+  ],
+  "workspace_id": "38dfee98-2746-4ed8-b39e-944eaeb7f2bb",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
